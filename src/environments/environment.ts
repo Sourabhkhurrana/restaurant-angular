@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  url: 'http://myrestaurant-env.dxvdpfcpqy.us-east-1.elasticbeanstalk.com/'
+  url: 'http://localhost:5000/'
 };
 
 /*

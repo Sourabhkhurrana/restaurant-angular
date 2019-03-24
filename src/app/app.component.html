@@ -50,13 +50,13 @@
         <hr>
       </div>
       <div>
-        <div class="text-header">Cuisines</div>
+        <div class="text-header" *ngFor="let item of cuisines"></div>
         <div class="row">
           <div class="col-md-6 col-sm-6 col-lg-6">
-            Indian
+            {{item.cuisineName}}
           </div>
           <div class="col-md-6 col-sm-6 col-lg-6 info" style="text-align: end">
-            1343
+            {{item.count}}
           </div>
         </div>
         <hr>

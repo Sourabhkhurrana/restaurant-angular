@@ -28,4 +28,9 @@ export class RestaurentService {
     // return this.http.get(`${environment.url}/restaurant/getAllRestaurants`);
   }
 
+  public getAllCuisinesWithCount(): Observable<any> {
+    // return this.http.get('./assets/restaurents.json');
+    return this.http.get(`${environment.url}/restaurant/getAllCuisines`);
+  }
+
 }
