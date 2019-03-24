@@ -1,0 +1,63 @@
+<div class="">
+  <!-- <div class="info">
+    <h1>Article News Card</h1><span>Made with <i class='fa fa-heart animated infinite pulse'></i> by <a
+        href='http://andy.design'>Andy Tran</a> | Designed by <a href='http://justinkwak.com'>JustinKwak</a></span>
+  </div> -->
+  <div class="search-card">
+    <div class="location-search">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="search-input-header">
+            Searching in...
+            <div>
+              <input type="text" class="search2" placeholder="search for location...">
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="search-input-header">
+            Searching for...
+            <div>
+              <input type="text" class="search2" placeholder="Search for restaurant and cuisine...">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="cards">
+    <a class="card" href="#" *ngFor="let item of restaurants">
+      <span class="card-header" style="background-image: url(http://placeimg.com/400/200/animals);">
+        <div style="float: right; color: white !important;">
+          <div class="ratings rating-color clearfix" [ngStyle]="{'background-color': item['Rating color']}">
+            {{item['Aggregate rating']}}
+          </div>
+          <div class="amount">
+            <div>
+              {{item['Rating text']}}
+            </div>
+            <div>
+              {{item['Votes']}} Votes
+            </div>
+          </div>
+        </div>
+        <span class="card-title">
+          <h3>{{ item['Restaurant Name'] }} ({{ item['Restaurant ID'] }})</h3>
+        </span>
+      </span>
+      <div class="card-summary">
+        <div class="row">
+          <div class="col">
+            <div style="font-size: 15px;"><i>{{item['Cuisines']}}</i></div>
+            <div style="font-size: 12px; color: #666666;">Cost <i> {{getCurrency(item['Currency'])}} {{item['Average Cost for two']}}
+                for two</i> </div>
+            <div style="font-size: 12px; color: #666666;" *ngIf="item['Has Table booking'] == 'Yes'">Table booking available</div>
+            <div style="font-size: 15px;">Accept cash <span *ngIf="item['Has Online delivery'] == 'Yes'">&
+                online</span>payments</div>
+          </div>
+        </div>
+
+      </div>
+    </a>
+  </div>
+</div>
